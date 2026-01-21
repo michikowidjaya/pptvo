@@ -1,0 +1,19 @@
+{
+  "name": "ppt-auto-vo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "ts-node-esm src/cli/build.ts",
+    "watch": "ts-node-esm src/cli/watch.ts"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
