@@ -46,6 +46,42 @@ def main():
 
     ensure_dirs()
 
+    # --- Script input UI (adaptive) ---
+    st.sidebar.header("Voiceover Script (optional)")
+    # Allow uploading a script.txt file
+    script_upload = st.sidebar.file_uploader("Upload script.txt", type=["txt"] , key="script_upload")
+    if script_upload is not None:
+        dest = INPUT_DIR / "script.txt"
+        with open(dest, "wb") as f:
+            f.write(script_upload.getbuffer())
+        st.sidebar.success("Saved script to input/script.txt")
+
+    # Load existing script.txt if present
+    script_path = INPUT_DIR / "script.txt"
+    existing_script = ""
+    if script_path.exists():
+        try:
+            with open(script_path, "r", encoding="utf-8") as f:
+                existing_script = f.read()
+        except Exception:
+            existing_script = ""
+
+    # Adaptive textarea height based on content lines
+    def _textarea_height_for(text: str):
+        lines = max(3, text.count("\n") + 1)
+        # 22 px per line approx, clamp between 150 and 800
+        h = min(800, max(150, lines * 22))
+        return h
+
+    script_text = st.sidebar.text_area("Edit or paste voiceover script (use [SLIDE n] tags if desired)", value=existing_script, height=_textarea_height_for(existing_script))
+    if st.sidebar.button("Save script to input/script.txt"):
+        try:
+            with open(script_path, "w", encoding="utf-8") as f:
+                f.write(script_text)
+            st.sidebar.success("Saved script to input/script.txt")
+        except Exception as e:
+            st.sidebar.error(f"Failed to save script: {e}")
+
     st.sidebar.header("Input")
     uploaded = st.sidebar.file_uploader("Upload PPTX or PDF", type=["pdf", "pptx"])
     if uploaded is not None:
