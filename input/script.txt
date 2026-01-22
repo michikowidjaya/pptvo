@@ -1,0 +1,134 @@
+[SLIDE 1]
+Selamat pagi atau siang atau sore, disini saya akan mempresentasikan mengenai BiWeekly Update untuk Sulawesi Region.
+
+[SLIDE 2]
+Pada presentasi ini, pembahasan akan dibagi ke dalam tiga bagian utama. Pertama, Executive Summary. Kedua, Performance, yang mencakup Revenue Performance, SWE Performance, Ketiga, GA Real dan NCA Performance.
+
+[SLIDE 3]
+Sampai tanggal tiga belas Desember, Revenue kita mencatatkan penurunan sebesar satu koma sembilan  persen. Penurunan ini utamanya didorong oleh rendahnya pembelian paket melalui SIDOMPUL. Hal ini merupakan dampak dari strategi product revamping, di mana produk BP Triple Quota telah resmi dihentikan. Saat ini, kita sedang dalam proses transisi untuk memulihkan performa melalui produk pengganti, yaitu BP Double Quota dan New Flex Max. Di sisi lain, brand Axis juga mengalami tekanan serupa, khususnya dari produk EWAKO yang juga sudah dihentikan.
+
+Beralih ke indikator SWE Paid, terdapat penurunan sebesar minus nol koma lima persen yang terjadi di seluruh kategori tenor, dimana
+Pada tenor kurang dari satu bulan, Penurunan didominasi oleh segmen Starter Pack (SP).
+Pada Tenor satu sampai tiga bulan, Terjadi perlambatan pada aktivitas recurring (perpanjangan otomatis) maupun reload paket.
+Pada Tenor lebih dari tiga bulan atau Existing, Penurunan juga terlihat pada pelanggan setia, yang diduga akibat berkurangnya traksi pada own channel kita dan platform Sidompul.
+
+Terakhir, untuk performa GA Real tercatat turun sebesar satu koma persen, diikuti dengan NCA yang juga turun sebesar dua persen. Penurunan ini merupakan imbas dari kebijakan produk SP lama  yang saat ini mekanismenya telah sepenuhnya dikonversi menjadi quota transfer
+
+[SLIDE 4]
+Selanjutnya, kita akan masuk ke pembahasan Performance, yang mencakup Revenue Performance, SWE Performance, serta GA Real dan NCA Performance.
+
+[SLIDE 5]
+Jika kita bedah lebih lanjut mengenai penurunan pendapatan sebesar satu koma sembilan persen tersebut, data menunjukkan bahwa penyebab utamanya terletak pada jalur penjualan kita. Penurunan ini dipicu oleh adanya pembaruan produk, yang dampaknya sangat terasa di toko atau outlet tradisional tempat di mana produk-produk lama kita sebelumnya sangat diminati.
+Hingga tanggal tiga belas Desember, pencapaian total pendapatan harian kita tercatat di angka 4 koma empat belas persen yang berarti kita baru mencapai 96 persen dari target yang ditetapkan. Penurunan ini sebagian besar dipengaruhi oleh jalur tradisional yang turun hingga empat koma lima persen. Kondisi serupa terlihat pada performa brand XL yang mengalami penurunan sebesar dua koma tiga persen akibat penjualan di konter-konter pulsa tradisional yang turun cukup dalam sebesar empat koma sembilan persen, meskipun jalur modern seperti minimarket masih mampu tumbuh tipis di angka satu koma empat persen.
+Di sisi lain, brand Axis tampil lebih stabil dengan penurunan yang sangat kecil, yaitu hanya nol koma sembilan persen. Hal yang menarik untuk dicatat adalah meskipun penjualan Axis di konter tradisional menurun, penjualannya di kanal modern justru melompat tinggi hingga mencapai sepuluh koma dua persen. Secara keseluruhan, tren harian menunjukkan bahwa aktivitas belanja pelanggan di bulan Desember cenderung lebih sepi dibandingkan bulan November, terutama setelah melewati minggu pertama. Hal ini mengindikasikan bahwa produk baru kita masih dalam tahap penyesuaian dan belum sepenuhnya menarik minat pelanggan di pasar.
+Sebagai kesimpulan, fokus utama kita saat ini adalah mengembalikan daya tarik penjualan di toko-toko tradisional, sembari terus mempertahankan momentum pertumbuhan yang sangat positif di jalur modern, khususnya untuk brand Axis.
+
+[SLIDE 6]
+Untuk brand XL, penurunan revenue dominan berasal dari SIDOMPUL, seiring dengan penghentian Bebas Puas Triple Quota.
+Sementara itu, Axis juga mengalami penurunan, terutama dari produk Ewako yang telah dihentikan.
+Jika dilihat per layanan, SIDOMPUL mengalami penurunan terdalam, SP dan Voucher juga mengalami penurunan, Sedangkan Modern dan Own Channel relatif lebih stabil, namun belum cukup kuat untuk menutup gap penurunan.
+
+
+[SLIDE 7]
+Kontribusi Own Channel masih mendominasi, namun tren pertumbuhannya melambat, terutama pada brand XL.
+Pada periode Juli hingga Desember Traditional channel terus mengalami penurunan kontribusi, Modern channel relatif stabil, Own channel tetap menjadi kontributor utama, tetapi pertumbuhannya melambat seiring tekanan produk.
+
+[SLIDE 8]
+Sebagian besar cluster di Sulawesi mengalami penurunan revenue, yang selaras dengan dampak product revamping. Achievement terhadap target berada di level sembilan puluh enam  persen, MTD growth tercatat minus satu koma sembilan persen, Hampir seluruh cluster menunjukkan pelemahan dibanding bulan sebelumnya, meskipun beberapa cluster masih mencatat pertumbuhan positif secara historis.
+
+
+[SLIDE 9]
+Pada SIDOMPUL, produk Bebas Puas Triple Quota dengan harga di atas tujuh puluh lima ribu mengalami penurunan signifikan.
+Sebagian pelanggan bermigrasi ke produk dengan harga lebih rendah, khususnya XCF M, yang menyebabkan penurunan di bracket harga tinggi serta peningkatan relatif di bracket harga menengah dan rendah.
+
+
+[SLIDE 10]
+Untuk Axis, penurunan terutama berasal dari produk Ewako tiga puluh lima ribu. Baik dari sisi CCDR maupun transaksi, terlihat: Penurunan pada bracket mid hingga high, Sementara bracket rendah masih relatif bertahan, namun belum cukup untuk menahan penurunan total.
+
+
+[SLIDE 11]
+Sebagai respon terhadap penghentian produk lama, XL memfokuskan pertumbuhan pada New Flex Max, serta XCF tiga puluh hari disubstitusi menjadi XCF dua puluh delapan hari. Sementara Axis memfokuskan penguatan pada produk Bronet. Produk baru menunjukkan top growth positif, meskipun belum sepenuhnya menutup penurunan dari produk lama yang dihentikan.
+
+[SLIDE 12]
+Terlihat adanya pergeseran transaksi dari BP Triple Quota ke BP Double Quota dan New Flex Max. Namun demikian, dibutuhkan program tambahan untuk mendorong partisipasi RO, agar dapat mempercepat  produk pengganti di lapangan.
+
+[SLIDE 13]
+Slide ini menampilkan implementasi aktivasi New Flex Max di lapangan, berupa Banner toko, promosi fisik, Dan visibilitas produk di outlet.
+Aktivasi ini bertujuan untuk meningkatkan penetrasi New Flex Max, sebagai pengganti produk lama.
+
+[SLIDE 14]
+Dampak product revamping terlihat di seluruh tenor revenue, khususnya pada recurring customer.
+Penurunan paling dalam terjadi pada Tenor lebih dari satu bulan, Diikuti tenor satu sampai tiga bulan. Sementara tenor kurang dari tiga bulan juga mulai tertekan, meskipun relatif lebih resilient.
+
+[SLIDE 15]
+Penurunan revenue pada SWE kurang dari satu bulan selain disebabkan oleh product revamping, juga dipengaruhi oleh SP lama yang telah dikonversi menjadi quota transfer.
+Hampir seluruh cluster menunjukkan penurunan M satu , terutama pada XL dan Axis.
+
+[SLIDE 16]
+Pada SWE tenor satu sampai tiga bulan, penurunan dominan berasal dari recurring dan reload paket. Hal ini mengindikasikan bahwa pelanggan belum sepenuhnya beradaptasi dengan struktur produk baru.
+
+[SLIDE 17]
+Product revamping juga mulai berdampak pada SWE kurang dari tiga bulan.Meskipun secara historis masih tumbuh, tren M satu menunjukkan pelemahan, terutama pada XL.
+
+[SLIDE 18]
+Secara total, SWE Paid turun, dengan penurunan terbesar terjadi pada tenor kurang dari 3 bulan. XL paling terlihat, khususnya akibat SP lama yang telah dikonversi menjadi quota transfer.
+
+[SLIDE 19]
+Detail per microcluster menunjukkan bahwa: Hampir seluruh area mengalami penurunan SWE Paid, Penurunan paling signifikan berasal dari SP old, Dan terlihat konsisten pada M min satu hingga M min tiga 
+
+
+[SLIDE 20]
+Untuk SWE Paid lebih dari 3 bulan, penurunan relatif lebih moderat, namun tetap terlihat adanya: Penurunan traksi reload, Terutama pada Sidompul dan Own Channel.
+
+[SLIDE 21]
+GA Real dan NCA sama-sama mengalami penurunan. Penurunan ini sebagian besar berasal dari SP Non-3GB, akibat berkurangnya stok di market, karena SP lama telah banyak dikonversi ke quota.
+
+[SLIDE 22]
+Dari komposisi SP tersebut, dapat diketahui jika SP 3GB menunjukkan performa yang relatif lebih baik, tetapi  SP 0 dan SP Old mengalami penurunan dari sisi GA Real maupun NCA.
+
+[SLIDE 23]
+Penurunan GA Real dan NCA terutama berasal dari cluster dengan basis pemain besar, yang sebelumnya memiliki stok SP lama lebih tinggi.
+Hal ini menunjukkan transisi stok masih menjadi tantangan utama di area dengan volume besar.
+
+[SLIDE 24]
+Mayoritas area menunjukkan pertumbuhan pada SP 3GB, baik dari sisi GA Real maupun NCA.
+Ini mengindikasikan bahwa SP 3GB mulai menjadi produk utama 
+
+[SLIDE 25]
+Perbandingan November ke Desember menunjukkan bahwa SP 3GB tumbuh positif, tetapi SP 0 dan SP Old terus menurun secara signifikan.
+
+[SLIDE 26]
+Setelah market fully revamping, survival rate SP 3GB tercatat lebih baik dibandingkan produk lainnya.
+Retention pada bulan M satu  dan M dua menunjukkan performa yang lebih stabil, terutama dibandingkan SP Old.
+
+[SLIDE 27]
+Detail survival rate per cluster di brand XL CO menunjukkan bahwa SP 3GB konsisten memiliki survival rate lebih tinggi, terutama setelah fase awal akuisisi.
+
+[SLIDE 28]
+Seperti brand XL CO di slide sebelumnya, detail survival rate per cluster di brand XL menunjukkan bahwa SP 3GB konsisten memiliki survival rate lebih tinggi, terutama setelah fase awal akuisisi.
+
+[SLIDE 28]
+Detail survival rate per cluster di brand AXIS menunjukkan bahwa SP 3GB konsisten memiliki survival rate lebih tinggi, terutama setelah fase awal akuisisi.
+Sehingga, untuk ketiga brand yaitu XL CO, XL, dan AXIS, SP 3GB konsisten memiliki survival rate lebih tinggi, terutama setelah fase awal akuisisi.
+
+[SLIDE 30]
+Pada slide ini, kita melihat update stok Starter Pack per kota di Sulawesi dengan posisi data per tiga belas Desember dua ribu dua puluh lima. Fokus utama pada slide ini adalah kondisi Days of Inventory RO untuk Starter Pack tiga giga.
+Secara keseluruhan, tujuh persen atau lima kota di wilayah Sulawesi tercatat memiliki Days of Inventory RO Starter Pack tiga giga yang berada di bawah lima belas hari. Kondisi ini menunjukkan adanya risiko kekosongan stok dalam waktu dekat apabila tidak segera dilakukan replenishment.
+Jika dilihat dari gabungan brand XL dan Axis, distribusi stok Starter Pack tiga giga masih didominasi oleh kota kota dengan Days of Inventory kurang dari tiga puluh hari. Sebagian kota berada pada rentang lima belas hingga tiga puluh hari, disusul oleh kota kota dengan rentang tiga puluh hingga enam puluh hari, dan hanya sebagian kecil kota yang sudah memiliki stok di atas enam puluh hari. Hal ini mengindikasikan bahwa secara umum stok masih relatif pendek dan membutuhkan pengawasan yang ketat.
+Untuk brand XL, kondisi stok Starter Pack tiga giga terlihat lebih menantang. Masih terdapat sejumlah kota dengan Days of Inventory di bawah lima belas hari, serta cukup banyak kota yang berada pada rentang lima belas hingga tiga puluh hari. Artinya, risiko kekurangan stok pada brand XL relatif lebih tinggi dan perlu menjadi prioritas dalam distribusi.
+Sementara itu, pada brand Axis, kondisi stok relatif lebih aman. Sebagian besar kota telah memiliki Days of Inventory yang lebih panjang, terutama pada kategori di atas enam puluh hari. Jumlah kota dengan stok sangat rendah pada brand Axis tergolong minimal, sehingga tekanan stok tidak sebesar yang terjadi pada brand XL.
+Jika dilihat lebih detail pada tabel per kota, kota kota dengan Days of Inventory Starter Pack tiga giga yang rendah tersebar di beberapa area Sulawesi Utara, Sulawesi Tenggara, dan sebagian Sulawesi Selatan. Pola yang terlihat menunjukkan bahwa laju penjualan di kota kota tersebut lebih cepat dibandingkan dengan ketersediaan stok yang ada.
+Secara keseluruhan, slide ini menunjukkan bahwa Starter Pack tiga giga telah menjadi produk utama pasca revamping, namun kesiapan stok di beberapa kota belum sepenuhnya mampu mengimbangi tingkat permintaan. Oleh karena itu, diperlukan percepatan distribusi dan monitoring yang lebih intensif, khususnya di kota kota dengan Days of Inventory yang rendah, agar potensi kehilangan penjualan dapat dihindari.
+
+[SLIDE 31]
+Pada slide ini, kita melihat update stok PV per kota di Sulawesi dengan posisi data per tiga belas Desember dua ribu dua puluh lima. Fokus utama pada slide ini adalah kondisi Days of Inventory RO untuk PV dengan paket.
+Secara keseluruhan, tiga puluh tiga persen atau dua puluh tiga kota di Sulawesi tercatat memiliki Days of Inventory RO PV dengan paket di bawah lima belas hari. Angka ini menunjukkan bahwa sepertiga kota di Sulawesi berada dalam kondisi stok yang cukup kritis dan berpotensi mengalami kekosongan dalam waktu dekat.
+Jika dilihat dari gabungan brand XL dan Axis, pada kategori PV dengan paket, sebagian besar kota masih berada pada rentang lima belas hingga tiga puluh hari. Namun demikian, jumlah kota dengan Days of Inventory di bawah lima belas hari juga cukup besar, sehingga kondisi ini perlu mendapatkan perhatian serius. Hanya sebagian kecil kota yang telah memiliki stok PV dengan paket di atas enam puluh hari.
+Untuk brand XL, kondisi PV dengan paket menunjukkan tekanan yang cukup tinggi. Masih terdapat sejumlah kota dengan Days of Inventory di bawah lima belas hari, serta cukup banyak kota yang berada pada rentang lima belas hingga tiga puluh hari. Hal ini mengindikasikan bahwa ketersediaan PV dengan paket pada brand XL relatif belum aman dan membutuhkan percepatan replenishment.
+Sementara itu, pada brand Axis, kondisi PV dengan paket juga menunjukkan pola yang serupa. Terdapat kota kota dengan Days of Inventory di bawah lima belas hari, meskipun sebagian kota lainnya sudah berada pada rentang tiga puluh hingga enam puluh hari dan di atas enam puluh hari. Secara umum, tekanan stok pada PV dengan paket masih cukup terasa di brand Axis.
+Jika dilihat dari tabel detail per kota, kota kota dengan Days of Inventory PV dengan paket yang rendah tersebar di berbagai cluster Sulawesi, baik di wilayah Sulawesi Utara, Sulawesi Selatan, maupun Sulawesi Tenggara. Pola ini menunjukkan bahwa laju penjualan PV dengan paket masih cukup tinggi, sementara ketersediaan stok belum sepenuhnya mampu mengimbanginya.
+Secara keseluruhan, slide ini menegaskan bahwa kondisi stok PV dengan paket di Sulawesi berada dalam level yang perlu diwaspadai. Dengan proporsi kota yang memiliki Days of Inventory di bawah lima belas hari yang cukup besar, diperlukan monitoring yang lebih intensif serta percepatan distribusi agar potensi kehilangan penjualan dapat diminimalkan.
+
+[SLIDE 32]
+Demikian Bi-Weekly Update Sulawesi Region yang dapat kami sampaikan.
+Terima kasih atas perhatian Anda.

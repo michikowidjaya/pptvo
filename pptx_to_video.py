@@ -13,6 +13,7 @@ import sys
 import subprocess
 import shutil
 import time
+import re
 from pathlib import Path
 from gtts import gTTS
 
@@ -130,6 +131,47 @@ class PPTXToVideoConverter:
             print(f"ERROR: Failed to convert PDF to PNG: {e}")
             sys.exit(1)
     
+    def parse_script_file(self, script_path):
+        """
+        Parse script.txt file with format [SLIDE n] followed by voiceover text.
+        Returns a list of text strings, one per slide.
+        """
+        if not script_path.exists():
+            print(f"   [!] Script file not found: {script_path}")
+            return None
+        
+        print(f"   [Metode] Menggunakan script.txt untuk voiceover...")
+        
+        with open(script_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Split by [SLIDE n] pattern
+        # Pattern: [SLIDE followed by number and optional whitespace and ]
+        pattern = r'\[SLIDE\s+(\d+)\]'
+        slides = re.split(pattern, content)
+        
+        # slides will be: ['', '1', 'text1', '2', 'text2', ...]
+        # We need to pair slide numbers with their text
+        slide_texts = {}
+        for i in range(1, len(slides), 2):
+            if i + 1 < len(slides):
+                slide_num = int(slides[i])
+                text = slides[i + 1].strip()
+                slide_texts[slide_num] = text
+        
+        # Convert to ordered list (starting from slide 1)
+        max_slide = max(slide_texts.keys()) if slide_texts else 0
+        result = []
+        for i in range(1, max_slide + 1):
+            if i in slide_texts:
+                result.append(slide_texts[i])
+                print(f"    - Slide {i}: {len(slide_texts[i])} karakter dari script.txt")
+            else:
+                result.append(f"Slide {i}")
+                print(f"    - Slide {i}: [tidak ada di script, menggunakan default]")
+        
+        return result
+    
     def extract_text_from_pdf(self, pdf_path):
         """
         Extract text from PDF pages using pdfplumber (recommended) or PyPDF2.
@@ -235,9 +277,15 @@ class PPTXToVideoConverter:
             print("\n1. Converting PPTX to PDF...")
             pdf_path = self.convert_pptx_to_pdf(input_path)
         
-        # Step 2: Extract text
-        print("\n2. Extracting text from PDF...")
-        slide_texts = self.extract_text_from_pdf(pdf_path)
+        # Step 2: Try to load script.txt first, then fallback to PDF extraction
+        print("\n2. Loading voiceover text...")
+        script_path = self.input_dir / "script.txt"
+        slide_texts = self.parse_script_file(script_path)
+        
+        # If script.txt not available or empty, extract from PDF
+        if not slide_texts:
+            print("   [Fallback] Extracting text from PDF...")
+            slide_texts = self.extract_text_from_pdf(pdf_path)
         
         # Step 3: Convert to PNG
         print("\n3. Extracting RAW PNG images from PDF...")
@@ -247,6 +295,15 @@ class PPTXToVideoConverter:
         if not slide_texts or len(slide_texts) != len(png_files):
             print("   Warning: Text mismatch or extraction failed. Using default narration.")
             slide_texts = [f"Slide {i}" for i in range(1, len(png_files) + 1)]
+        elif len(slide_texts) < len(png_files):
+            print(f"   Warning: Script has {len(slide_texts)} slides but PDF has {len(png_files)} pages.")
+            print("   Padding with default text for remaining slides...")
+            for i in range(len(slide_texts) + 1, len(png_files) + 1):
+                slide_texts.append(f"Slide {i}")
+        elif len(slide_texts) > len(png_files):
+            print(f"   Warning: Script has {len(slide_texts)} slides but PDF has {len(png_files)} pages.")
+            print("   Truncating script to match PDF page count...")
+            slide_texts = slide_texts[:len(png_files)]
         
         # Step 4: Generate audio for each slide (FORCE LOOP)
         print("\n4. Generating TTS audio for each slide...")
