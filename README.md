@@ -1,22 +1,105 @@
 # ppt-auto-vo
 
-Automated pipeline untuk mengonversi file PPTX atau PDF menjadi video slideshow (MP4) dengan voiceover.
+Automated pipeline untuk mengonversi PPTX atau PDF menjadi video slideshow (MP4) dengan voiceover.
 
-## Two Implementations Available
+---
 
-### 1. Python Implementation (NEW) ⭐ Recommended for Beginners
+## Ringkasan
 
-**Pipeline:** PPTX/PDF → PDF → RAW PNG (via pdftoppm) → TTS with gTTS → Combine with FFmpeg → output.mp4
+- **Python**: Gratis, menggunakan `gTTS` (Google TTS). Mudah digunakan dan tidak memerlukan API berbayar.
+- **TypeScript**: Menggunakan ElevenLabs (kualitas suara lebih baik), memerlukan API key berbayar.
 
-**Features:**
-- ✅ Free TTS using Google Text-to-Speech (gTTS)
-- ✅ No API key required
-- ✅ Simple Python setup
-- ✅ Automatic fallback to silent audio if offline
-- ✅ **Support for PDF files** - Convert PDF documents directly to video
-- ✅ **Support for PPTX files** - Convert PowerPoint presentations to video via PDF
-- ✅ **RAW PNG extraction** - Extract unmodified slide images directly from PDF using pdftoppm
-- ✅ **Consistent pipeline** - Both PPTX and PDF follow the same PDF → PNG → Video path
+---
+
+## Persyaratan sistem
+
+- `ffmpeg`
+- `pdftoppm` (Poppler)
+- LibreOffice (untuk konversi PPTX)
+
+Untuk Python juga diperlukan paket Python yang tercantum di `requirements.txt`.
+
+---
+
+## Instalasi (Python)
+
+1. Pasang dependency Python:
+
+2. Pasang dependency sistem (contoh Ubuntu/Debian):
+
+```bash
+sudo apt install ffmpeg poppler-utils libreoffice
+```
+
+---
+
+## Menjalankan (Python)
+
+- Jalankan pipeline langsung:
+
+```bash
+python pptx_to_video.py --file slides.pptx
+python pptx_to_video.py --file document.pdf
+```
+
+- Atau jalankan antarmuka Streamlit untuk UI sederhana:
+
+```bash
+streamlit run streamlit_app.py
+# buka http://localhost:8501
+```
+
+---
+
+## Menjalankan (TypeScript)
+
+Persyaratan: Node.js 18+, ElevenLabs API key (jika ingin TTS berkualitas tinggi).
+
+```bash
+npm install
+cp .env.example .env
+# edit .env -> set ELEVENLABS_API_KEY dan ELEVENLABS_VOICE_ID
+npm run build
+npm run watch
+```
+
+---
+
+## Output & Struktur folder
+
+- Final video: `output/output.mp4`
+- Cache/intermediate:
+	- Python: `temp/` (pdf/, slides/, audio/, slide_videos/)
+	- TypeScript: `cache/`
+
+Contoh struktur:
+
+```
+project-root/
+├── input/          # tempat meletakkan slides.pptx / document.pdf / script.txt
+├── output/         # output/output.mp4
+├── temp/           # cache Python
+├── cache/          # cache TypeScript
+├── pptx_to_video.py
+├── streamlit_app.py
+└── src/            # TypeScript sumber
+```
+
+---
+
+## Pilih implementasi
+
+- Pilih **Python** untuk solusi cepat dan gratis.
+- Pilih **TypeScript** jika memerlukan TTS berkualitas tinggi (ElevenLabs).
+
+---
+
+Jika ingin, saya bisa menambahkan:
+- contoh `script.txt` template
+- tombol auto-fill script dari PDF (ekstraksi teks)
+- panduan setup ElevenLabs
+
+Silakan beri tahu fitur mana yang Anda inginkan.
 
 **Requirements:**
 - Python 3.8+
