@@ -12,7 +12,8 @@ st.set_page_config(page_title="ppt-auto-vo", layout="wide")
 
 
 ROOT = Path(__file__).parent
-APP_DATA_ROOT = ROOT if os.access(ROOT, os.W_OK) else Path(tempfile.gettempdir()) / "pptvo"
+# Use a writable runtime directory so Streamlit Cloud does not try to write into the repo checkout.
+APP_DATA_ROOT = Path(tempfile.gettempdir()) / "pptvo"
 INPUT_DIR = APP_DATA_ROOT / "input"
 OUTPUT_DIR = APP_DATA_ROOT / "output"
 TEMP_DIR = APP_DATA_ROOT / "temp"
