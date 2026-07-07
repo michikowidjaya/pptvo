@@ -1,6 +1,7 @@
 import os
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 import streamlit as st
@@ -11,9 +12,10 @@ st.set_page_config(page_title="ppt-auto-vo", layout="wide")
 
 
 ROOT = Path(__file__).parent
-INPUT_DIR = ROOT / "input"
-OUTPUT_DIR = ROOT / "output"
-TEMP_DIR = ROOT / "temp"
+APP_DATA_ROOT = ROOT if os.access(ROOT, os.W_OK) else Path(tempfile.gettempdir()) / "pptvo"
+INPUT_DIR = APP_DATA_ROOT / "input"
+OUTPUT_DIR = APP_DATA_ROOT / "output"
+TEMP_DIR = APP_DATA_ROOT / "temp"
 
 
 def ensure_dirs():
@@ -33,7 +35,21 @@ def save_uploaded(uploaded_file):
 
 
 def run_pipeline(filename: str, language: str, clean: bool):
-    cmd = [sys.executable, "-u", str(ROOT / "pptx_to_video.py"), "--file", filename, "--output", "output", "--language", language]
+    cmd = [
+        sys.executable,
+        "-u",
+        str(ROOT / "pptx_to_video.py"),
+        "--input",
+        str(INPUT_DIR),
+        "--output",
+        str(OUTPUT_DIR),
+        "--temp",
+        str(TEMP_DIR),
+        "--file",
+        filename,
+        "--language",
+        language,
+    ]
     if clean:
         cmd.append("--clean")
 
@@ -70,22 +86,36 @@ def main():
 
     files = list_input_files()
     if not files:
-        st.warning("No input files found in the `input/` directory. Upload one or add files to input/.")
-        st.stop()
-
-    selected = st.selectbox("Choose input file", files)
+        st.warning("No input files found yet. Upload a PPTX or PDF above first.")
+        selected = None
+    else:
+        selected = st.selectbox("Choose input file", files)
 
     language = st.text_input("TTS language code (e.g. en, id)", value="id")
     clean = st.checkbox("Clean temp before run", value=True)
 
     # Run pipeline button (main area)
-    if st.button("Run Pipeline", key="run_pipeline_btn"):
+    if st.button("Run Pipeline", key="run_pipeline_btn", disabled=selected is None):
         st.info(f"Running pipeline on {selected} (lang={language})")
         log_box = st.empty()
         progress = st.empty()
         with st.spinner("Processing... this may take a while"):
             # Stream subprocess output live
-            cmd = [sys.executable, "-u", str(ROOT / "pptx_to_video.py"), "--file", selected, "--output", "output", "--language", language]
+            cmd = [
+                sys.executable,
+                "-u",
+                str(ROOT / "pptx_to_video.py"),
+                "--input",
+                str(INPUT_DIR),
+                "--output",
+                str(OUTPUT_DIR),
+                "--temp",
+                str(TEMP_DIR),
+                "--file",
+                selected,
+                "--language",
+                language,
+            ]
             if clean:
                 cmd.append("--clean")
 
