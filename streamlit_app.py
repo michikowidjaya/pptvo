@@ -3,12 +3,28 @@ import shutil
 import subprocess
 import tempfile
 from pathlib import Path
+import sys
 
 import streamlit as st
-import sys
 
 # Use wide layout to reduce side margins
 st.set_page_config(page_title="ppt-auto-vo", layout="wide")
+
+# Check if running on Streamlit Cloud
+IS_CLOUD = "STREAMLIT_SERVER_HEADLESS" in os.environ or "STREAMLIT_SCRIPT_RUN_CONTEXT" in os.environ
+
+# Check if required tools are available
+def check_requirements():
+    missing = []
+    for tool in ["ffmpeg", "pdftoppm", "soffice"]:
+        try:
+            subprocess.run([tool, "--version" if tool != "pdftoppm" else "-v"], 
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True, timeout=2)
+        except (FileNotFoundError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
+            missing.append(tool)
+    return missing
+
+missing_tools = check_requirements()
 
 
 ROOT = Path(__file__).parent
@@ -75,6 +91,30 @@ def main():
         unsafe_allow_html=True,
     )
     st.title("pptvo: Automated Voiceover Video from PPTX/PDF")
+
+    if IS_CLOUD or missing_tools:
+        st.warning("⚠️ This app requires system tools that are not available in this environment.")
+        if missing_tools:
+            st.error(f"Missing tools: {', '.join(missing_tools)}")
+        st.info("""
+        **To use this app:**
+        
+        1. **Run locally** (recommended):
+           ```bash
+           pip install -r requirements.txt
+           streamlit run streamlit_app.py
+           ```
+        
+        2. **Or deploy on a VPS** with ffmpeg, poppler-utils, and libreoffice installed.
+        
+        **Why?** This app converts PPTX/PDF → PNG → MP4 using:
+        - `ffmpeg` for video processing
+        - `pdftoppm` (poppler) for PDF extraction  
+        - LibreOffice for PPTX conversion
+        
+        These tools are too large/heavy for Streamlit Cloud.
+        """)
+        return
 
     ensure_dirs()
 
